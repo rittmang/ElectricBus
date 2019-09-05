@@ -5,30 +5,119 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.css">
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrap.bundle.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
 <div class=".mx-auto px-4">
-<h1 class="display-6">Electric Bus Scheduling Algorithm</h1>
-<p class="lead">KPIT Sparkle</p>
-<nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link active" href="#">Active</a>
-  <a class="nav-item nav-link" href="#">Much longer nav link</a>
-  <a class="nav-item nav-link" href="#">Link</a>
-  <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-</nav>
+  <h1 class="display-6">Electric Bus Scheduling Algorithm</h1>
+  <p class="lead">KPIT Sparkle</p>
+  <nav class="nav nav-pills nav-justified">
+    <a class="nav-item nav-link active" href="#">Buses & F/Chargers required</a>
+    <a class="nav-item nav-link" href="#">Schedule for one bus</a>
+    <a class="nav-item nav-link" href="#">Schedule for all buses</a>
+    <a class="nav-item nav-link" href="#">Fast Charger Utilization</a>
+    <!--  <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+  </nav>
   <hr>
-<form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  <div class=".mx-auto px-0">
+    <div class="row">
+      <div class="col-sm">
+        <form>
+          <div class="row">
+            <div class="col">
+              <b>Is it a AC bus?</b>
+            </div>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>A/C distance (in km/hr)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+        </form>
+      </div>
+      <div class="col-sm">
+          <!-- 2nd column content goes here -->
+        <form>
+          <div class="row">
+            <div class="col">
+              <b>Is it a Circuit route?</b>
+            </div>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Distance (in km)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Time to travel (in mins)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+        </form>
+      </div>
+      <div class="col-sm">
+        <!-- 2nd column content goes here CHANGE IDS PLEASE, THEY'RE LITERALLY THE SAME-->
+        <form>
+          <div class="row">
+            <div class="col">
+              <b>Can bus be charged at one place?</b>
+            </div>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Distance from A to B(km)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Distance from B to A(km)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Time to travel from A to B (min)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Time to travel from B to A (min)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+        </form>
+      </div>
+      <div class="col-sm">
+
+      </div>
+      <div class="col-sm">
+
+      </div>
+      <div class="col-sm">
+
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-  </div>
-</form>
+
 </div>
 </body>
 </html>
