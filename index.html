@@ -5,13 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://unpkg.com/popper.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://kit.fontawesome.com/c893428da3.js"></script>
+
 </head>
 <body>
 <div class=".mx-auto px-4">
+  <br>
   <h1 class="display-6">Electric Bus Scheduling Algorithm</h1>
-  <p class="lead">KPIT Sparkle</p>
+<!--  <p class="lead">KPIT Sparkle</p>-->
   <nav class="nav nav-pills nav-justified">
     <a class="nav-item nav-link active" href="#">Buses & F/Chargers required</a>
     <a class="nav-item nav-link" href="#">Schedule for one bus</a>
@@ -45,7 +50,7 @@
         </form>
       </div>
       <div class="col-sm">
-          <!-- 2nd column content goes here -->
+        <!-- 2nd column content goes here -->
         <form>
           <div class="row">
             <div class="col">
@@ -107,13 +112,67 @@
         </form>
       </div>
       <div class="col-sm">
+        <form>
+          <div class="form-group">
+            <label for="form_need"><b>Bus frequency (min)</b></label>
+            <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+              <option value=""></option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+            <div class="help-block with-errors"></div>
+          </div>
 
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Rest time after each one way trip (min)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Range of the bus (km)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Rate of fast charging (km/min)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Max charging possible with fast charge (%)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+        </form>
       </div>
       <div class="col-sm">
-
+          <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Trips Start Time (HH:MM)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Trips End Time (HH:MM)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Setup time to start fast charger (min)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Dead km</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+            <div class="form-group">
+            <label for="formGroupExampleInput2"><b>Min. SOC threshold (%)</b></label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Input value">
+          </div>
+        </form>
       </div>
       <div class="col-sm">
-
+        <button class="btn btn-primary" type="submit">Apply Changes</button>
+        <br><br>
+        <button type="button" class="btn btn-light" aria-label="Left Align">
+          <span class="fa fa-download" aria-hidden="true"></span> Download Trips
+        </button>
       </div>
     </div>
   </div>
